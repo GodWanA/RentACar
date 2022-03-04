@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="183.0" prefWidth="320" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentacar.LoginController">
+   <children>
+      <TextField id="textField_login" fx:id="textField_login" layoutX="100.0" layoutY="14.0" prefHeight="25.0" prefWidth="209.0" />
+      <PasswordField id="passwordField_Login" fx:id="passwordField_Login" layoutX="100.0" layoutY="48.0" prefHeight="25.0" prefWidth="209.0" />
+      <Label layoutX="14.0" layoutY="18.0" text="Felhazsnálónév" />
+      <Label layoutX="63.0" layoutY="52.0" text="Jelszó" />
+      <Button id="button_login" fx:id="button_login" layoutX="104.0" layoutY="83.0" mnemonicParsing="false" onAction="#button_login_OnAction" text="Bejelentkezés">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </Button>
+      <TextArea editable="false" layoutX="12.0" layoutY="129.0" prefHeight="46.0" prefWidth="297.0" text="'login.ini' tartalmazza a jelszót és a felhasználevet&#10;base64 titkosítással. Alapértelmezetten f: a  pw: a" />
+   </children>
+</AnchorPane>

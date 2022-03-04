@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="447.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rentacar.MainController">
+   <children>
+      <GridPane prefHeight="401.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="369.0" minWidth="10.0" prefWidth="321.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="441.0" minWidth="10.0" prefWidth="426.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="346.0" minHeight="0.0" prefHeight="24.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="396.0" minHeight="10.0" prefHeight="308.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="34.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="76.0" minHeight="5.0" prefHeight="36.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="button_ujBerlo" mnemonicParsing="false" onAction="#button_ujBerlo_OnAction" text="Új bérlő">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="button_berloSzerkeszt" mnemonicParsing="false" onAction="#button_berloSzerkeszt_OnAction" text="Szerkesztés">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="button_torles" mnemonicParsing="false" onAction="#button_torles_OnAction" text="Törlés">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TextField fx:id="textfield_berlo" onKeyTyped="#textfield_berlo_OnActioin" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Bérlők">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Autók" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="textfield_autok" onKeyTyped="#textfield_autok_OnActioin" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Button fx:id="button_ujAuto" mnemonicParsing="false" onAction="#button_ujAuto_OnAction" text="Új autó">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="button_autoSzerkeszt" mnemonicParsing="false" onAction="#button_autoSzerkeszt_OnAction" text="Szerkesztés">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="button_autoTorles" mnemonicParsing="false" onAction="#button_autoTorles_OnAction" text="Törlés">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="tableView_auto" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="10.0" />
+               </GridPane.margin>
+            </TableView>
+            <TableView fx:id="tableView_berlo" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="5.0" />
+               </GridPane.margin>
+            </TableView>
+         </children>
+      </GridPane>
+      <Button fx:id="button_berles" mnemonicParsing="false" onAction="#button_berles_OnAction" prefHeight="37.0" prefWidth="787.0" text="Autó bérlése">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </Button>
+   </children>
+</VBox>
